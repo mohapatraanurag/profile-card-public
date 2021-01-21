@@ -1,0 +1,114 @@
+.card {
+    position: fixed;
+    width: 400px;
+    margin-top: calc(50vh - 200px);
+    left: calc(50vw);
+    transform: translateX(-50%);
+    box-shadow: 0px 40px 156px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+
+    @media (max-width: 376px) {
+        width: 325px;
+    }
+
+
+    &__header {
+        border-radius: 15px 15px 0px 0px;
+        background-image: url("../images/bg-pattern-card.svg");
+        background-size: cover;
+        height: 150px;
+        position: relative;
+
+        .avatar {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            bottom: -48px;
+            left: 200px;
+            
+            @media (min-width: 375px) {
+                left: calc(50%);
+            }
+            img {
+                padding: 5px;
+                background: white;
+                border-radius: 50%;
+            }
+            transform: translateX(-50%);
+        }
+    }
+    
+    &__profile {
+        display: flex;
+        background: white;
+        width: 100%;
+        flex-wrap: wrap;
+        border-top: 1px solid #e7e7e7;
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+        padding-right: 10px;
+        margin: 80px 0px 0px 0px;
+        text-align: right;
+        width: calc(65%)
+    }
+
+    &__age {
+        font-size: 18px;
+        margin: 80px 0px 0px 0px;
+        text-align: left;
+        width: calc(35%);
+    }
+
+    &__location {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        font-size: 14px;
+        width: 400px;
+        text-align: center;
+        color: $darkGrayishBlue;
+    }
+
+    &__stats {
+        width: 400px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row: auto;
+        align-content: stretch;
+        justify-content: center;
+        flex-direction: row;
+        background: white;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-right: 20px;
+        padding-left: 20px;
+        border-radius: 0px 0px 15px 15px ;
+        
+    @media (max-width: 376px) {
+        width: 325px;
+    }
+        //border-top: 0.1px solid $darkGrayishBlue;
+    }
+
+    .stat {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 5px;
+
+        &__value {
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        &__type {
+            margin-top: 10px;
+            font-size: 14px;
+            color: $darkGrayishBlue;
+        }
+    }
+}

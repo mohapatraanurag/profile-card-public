@@ -1,0 +1,46 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    //width: 1440px;
+    margin: 0;
+    padding: 0;
+    background: $darkCyan;
+    font-family: 'Kumbh Sans', sans-serif;
+    overflow: hidden;
+}
+
+.background-img {
+    position:fixed;
+
+    img {
+        position: absolute;
+    }
+}
+
+.image-top {
+    top: 0;
+    left: 0;
+    transform: translate(-30%, -45%);
+    @media (max-width: 376px) {
+        transform: translate(-81%, -56%);
+    }
+
+}
+
+
+.image-bottom {
+    bottom: 0;
+    right: 0;
+    transform: translate(173%, 149%);
+    @media (max-width: 376px) {
+        transform: translate(115%, 130%);
+    }
+}
